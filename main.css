@@ -21,9 +21,21 @@ html, body {
   display: inline-block;
   padding: 14px 40px;
   margin: 30px;
+  transition: 0.5s;
+}
+
+.yes:hover, .no:hover {
+  letter-spacing: 0.25em;
+  background: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
 }
 
 .mainimage {
   width: 200px;
   height: auto;
+}
+
+.text {
+  color: #E3A4C5;
+  font-size: 30px
 }
