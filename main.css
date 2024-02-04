@@ -1,0 +1,29 @@
+html, body {
+  margin: 25px auto;
+  overflow: hidden;
+  background-color: #242526;
+  min-height: 100vh;
+}
+
+.container {
+  position: absolute;
+  width:100%;
+  text-align: center;
+  margin-top: 250px;
+}
+
+.col-1 {
+  padding: 10px;
+}
+
+.yes, .no {
+  font-size: 20px;
+  display: inline-block;
+  padding: 14px 40px;
+  margin: 30px;
+}
+
+.mainimage {
+  width: 200px;
+  height: auto;
+}
