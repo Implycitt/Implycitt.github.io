@@ -1,6 +1,6 @@
 function hearts() {
   const create = document.createElement('div');
-  const container = document.getElementById('container');
+  const container = document.getElementById('ask');
 
   create.classList.add('hearts');
   create.innerHTML = `❤️`;
@@ -11,16 +11,23 @@ function hearts() {
 }
 
 document.getElementById("yes").onclick = function () { 
-  location.href = "yay.html";
+  location.href = "public/yay.html";
 };
 
-const maxWidth = 600;
-const maxHeight = 600;
+function moveButton() {
+  var x = Math.random() * (window.innerWidth - document.getElementById('no').offsetWidth);
+  var y = Math.random() * (window.innerHeight - document.getElementById('no').offsetHeight);
+  document.getElementById('no').style.left = `${x}px`;
+  document.getElementById('no').style.top = `${y}px`;
+}
 
 const button = document.getElementById('no');
 button.addEventListener('mouseover', function() {
-  button.style.left = Math.floor(Math.random() * (maxWidth + 1)) + 'px';
-  button.style.top = Math.floor(Math.random() * (maxWidth + 1)) + 'px';
+  moveButton();
+})
+
+button.addEventListener('mousedown', function() {
+  moveButton();
 })
 
 setInterval(hearts, 1000);
